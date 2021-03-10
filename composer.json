@@ -1,0 +1,27 @@
+{
+    "name": "softwareagil/swastarkencl",
+    "description": "Your shipments anywhere in Chile",
+    "type": "project",
+    "require": {
+        "php-curl-class/php-curl-class": "^8.8"
+    },
+    "authors": [
+        {
+            "name": "Software Agil",
+            "email": "info@softwareagil.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "includes/SwastarkenclDatabaseSchemas.php",
+            "includes/SwastarkenclSetting.php",
+            "includes/Swastarkencl.php",
+            "includes/SwastarkenclStarter.php",
+            "includes/classes/SwastarkenclState.php",
+            "includes/classes/SwastarkenclIssuance.php",
+            "includes/classes/SwastarkenclCarrier.php",
+            "includes/classes/SwastarkenclCustomerAgency.php",
+            "includes/SwastarkenclOrderMetaData.php"
+        ]
+    }
+}

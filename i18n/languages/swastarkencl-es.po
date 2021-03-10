@@ -1,0 +1,401 @@
+# Copyright (C) 2020 Software Agíl
+# This file is distributed under the same license as the Starken plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Starken 0.9.0\n"
+"Report-Msgid-Bugs-To: https://www.softwareagil.com\n"
+"Last-Translator: Carlos Espinoza <aecarlosae@gmail.com>\n"
+"Language-Team: Software Agíl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-12-16T20:47:14-04:00\n"
+"PO-Revision-Date: 2020-12-16 21:57\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: swastarkencl\n"
+
+#. Plugin Name of the plugin
+msgid "Starken"
+msgstr "Starken"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.softwareagil.com"
+msgstr ""
+
+#. Description of the plugin
+#: includes/Swastarkencl.php:21
+msgid "Your shipments anywhere in Chile"
+msgstr "Tus envios a cualquier lugar de chile"
+
+#. Author of the plugin
+msgid "Software Agíl"
+msgstr "Software Agíl"
+
+#: includes/classes/SwastarkenclCarrier.php:23
+msgid "Starken Normal to agency service"
+msgstr "Servicio Starken Normal a Agencia"
+
+#: includes/classes/SwastarkenclCarrier.php:29
+msgid "Starken Normal to residence service"
+msgstr "Servicio Starken Normal a Domicilio"
+
+#: includes/classes/SwastarkenclCarrier.php:35
+msgid "Servicio Starken Express a Agencia"
+msgstr ""
+
+#: includes/classes/SwastarkenclCarrier.php:41
+msgid "Starken Express to residence service"
+msgstr "Servicio Starken Express a Domicilio"
+
+#: includes/classes/SwastarkenclCarrier.php:47
+msgid "Starken Normal to agency service - Pay on arrival"
+msgstr "Servicio Starken Normal a Agencia - Pago en destino"
+
+#: includes/classes/SwastarkenclCarrier.php:53
+msgid "Starken Normal to residence service - Pay on arrival"
+msgstr "Servicio Starken Normal a Domicilio - Pago en destino"
+
+#: includes/classes/SwastarkenclCarrier.php:59
+msgid "Starken Express to agency service - Pay on arrival"
+msgstr "Servicio Starken Express a Agencia - Pago en destino"
+
+#: includes/classes/SwastarkenclCarrier.php:65
+msgid "Starken Express to residence service - Pay on arrival"
+msgstr "Servicio Starken Express a Domicilio - Pago en destino"
+
+#: includes/Swastarkencl.php:32
+#: includes/Swastarkencl.php:35
+msgid "API URL"
+msgstr "URL de la API"
+
+#: includes/Swastarkencl.php:34
+msgid "Enter the API URL to connect to Starken services"
+msgstr "Ingrese la url de la API para conectar a los Servicios de Starken"
+
+#: includes/Swastarkencl.php:39
+#: includes/Swastarkencl.php:45
+msgid "User token"
+msgstr "Token de usuario"
+
+#: includes/Swastarkencl.php:49
+msgid "Origin commune"
+msgstr "Comuna origen"
+
+#: includes/Swastarkencl.php:50
+msgid "Set the origin commune to rate and generate issues"
+msgstr "Seleccione la comuna origen para cotizar y generar la emisión"
+
+#: includes/Swastarkencl.php:41
+msgid "Enter the user token to authenticate in the Starken services"
+msgstr "Ingrese el token de usuario para autenticarse en los Servicios de Starken"
+
+#: includes/Swastarkencl.php:55
+#: templates/hooks/issuance.php:136
+msgid "Origin agency"
+msgstr "Agencia origen"
+
+#: includes/Swastarkencl.php:56
+msgid "Set the origin agency to generate issues"
+msgstr "Seleccione la agencia origen para generar las emisiones"
+
+#: includes/Swastarkencl.php:61
+#: includes/Swastarkencl.php:62
+msgid "Disable checking accounts"
+msgstr "Desactivar los cuentas corrientes"
+
+#: includes/Swastarkencl.php:64
+msgid "Disable checking accounts and avoid to fetch ralated rates"
+msgstr "Desactiva las cuentas corrientes y las cotizaciones relacionadas"
+
+#: includes/Swastarkencl.php:70
+#: includes/Swastarkencl.php:71
+msgid "Select a checking account"
+msgstr "Seleccione una cuenta corriente"
+
+#: includes/Swastarkencl.php:76
+#: includes/SwastarkenclStarter.php:142
+#: includes/SwastarkenclStarter.php:143
+msgid "RUT"
+msgstr "RUT"
+
+#: includes/Swastarkencl.php:78
+msgid "Enter the RUT. It will be use to rate and generate issues"
+msgstr "Ingrese el RUT. Se usará para cotizar y generar emisiones"
+
+#: includes/Swastarkencl.php:82
+msgid "Enter a RUT: 00000000-k"
+msgstr "Ingrese un RUT: 00000000-K"
+
+#: includes/Swastarkencl.php:84
+msgid "Cost Center"
+msgstr "Centro de costo"
+
+#: includes/Swastarkencl.php:86
+msgid "Select the cost center"
+msgstr "Seleccione el centro de costo"
+
+#: includes/Swastarkencl.php:98
+msgid "Hide shipping options without cost (0.00)"
+msgstr "Ocultar las opciones de envio sin costo (0.00)"
+
+#: includes/Swastarkencl.php:99
+msgid "Hide shipping options without cost"
+msgstr "Oculta las opciones de envios sin costos"
+
+#: includes/Swastarkencl.php:101
+msgid "Hide shipping options without cost (0.00) from API"
+msgstr "Oculta las opciones de envio sin costo (0.00) desde la API"
+
+#: includes/Swastarkencl.php:107
+msgid "Logs"
+msgstr "Registro de incidencias"
+
+#: includes/Swastarkencl.php:108
+msgid "Enable log"
+msgstr "Activa el registro de incidencias"
+
+#: includes/Swastarkencl.php:110
+msgid "This option is useful to fix API response problems"
+msgstr "Esta opción es útil para arreglar problemas relacionados a la API"
+
+#: includes/SwastarkenclStarter.php:124
+msgid "Commune"
+msgstr "Comuna"
+
+#: includes/SwastarkenclStarter.php:149
+#: includes/SwastarkenclStarter.php:150
+msgid "Street"
+msgstr "Calle"
+
+#: includes/SwastarkenclStarter.php:153
+#: includes/SwastarkenclStarter.php:154
+msgid "Number"
+msgstr "Número"
+
+#: includes/SwastarkenclStarter.php:158
+#: includes/SwastarkenclStarter.php:159
+msgid "Complement"
+msgstr "Complemento"
+
+#: includes/SwastarkenclStarter.php:171
+#: includes/SwastarkenclStarter.php:172
+msgid "Phone"
+msgstr "Teléfono"
+
+#: templates/hooks/agencies-selector.php:14
+#: templates/hooks/simple-agencies-selector.php:15
+msgid "Starken Agencies"
+msgstr "Agencias Starken"
+
+#: templates/hooks/agencies-selector.php:20
+msgid "Address:"
+msgstr "Dirección"
+
+#: templates/hooks/agencies-selector.php:22
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#: templates/hooks/agencies-selector.php:24
+msgid "Delivery:"
+msgstr "Entrega:"
+
+#: templates/hooks/agencies-selector.php:27
+msgid "Yes"
+msgstr "Si"
+
+#: templates/hooks/agencies-selector.php:28
+msgid "No"
+msgstr "No"
+
+#: templates/hooks/agencies-selector.php:32
+msgid "Weight Restrinction:"
+msgstr "Restrinción de peso"
+
+#: templates/hooks/agencies-selector.php:36
+msgid "Location on Google Map"
+msgstr "Ubicación en Google Map"
+
+#: templates/hooks/issuance.php:3
+msgid "Print your tag"
+msgstr "Imprimir etiqueta"
+
+#: templates/hooks/issuance.php:5
+msgid "here"
+msgstr "aquí"
+
+#: templates/hooks/issuance.php:11
+msgid "Shipping info"
+msgstr "Información de envío"
+
+#: templates/hooks/issuance.php:14
+msgid "Freight order"
+msgstr "Orden de flete"
+
+#: templates/hooks/issuance.php:25
+msgid "Origin"
+msgstr "Origen"
+
+#: templates/hooks/issuance.php:31
+msgid "Destination"
+msgstr "Destino"
+
+#: templates/hooks/issuance.php:37
+msgid "Issuer's RUT"
+msgstr "RUT del emisor"
+
+#: templates/hooks/issuance.php:43
+msgid "Issuer's name"
+msgstr "Nombre del emisor"
+
+#: templates/hooks/issuance.php:49
+msgid "Issuer's email"
+msgstr "Correo electrónico del emisor"
+
+#: templates/hooks/issuance.php:55
+msgid "Issuer's phone"
+msgstr "Teléfono del emisor"
+
+#: templates/hooks/issuance.php:61
+msgid "Issuer's mobile"
+msgstr "Teléfono móvil del emisor"
+
+#: templates/hooks/issuance.php:67
+msgid "Receiver's RUT"
+msgstr "RUT del destinatario"
+
+#: templates/hooks/issuance.php:73
+msgid "Receiver's name"
+msgstr "Nombre del destinatario"
+
+#: templates/hooks/issuance.php:79
+msgid "Receiver's email"
+msgstr "Correo electrónico del destinatario"
+
+#: templates/hooks/issuance.php:85
+msgid "Receiver's phone"
+msgstr "Teléfono del destinatario"
+
+#: templates/hooks/issuance.php:91
+msgid "Receiver's mobile"
+msgstr "Teléfono móvil del destinatario"
+
+#: templates/hooks/issuance.php:97
+msgid "Receiver's address"
+msgstr "Dirección del destinatario"
+
+#: templates/hooks/issuance.php:107
+msgid "Service type"
+msgstr "Tipo de servicio"
+
+#: templates/hooks/issuance.php:113
+msgid "Payment type"
+msgstr "Tipo de pago"
+
+#: templates/hooks/issuance.php:124
+msgid "Checking account"
+msgstr "Cuenta corriente"
+
+#: templates/hooks/issuance.php:130
+msgid "Cost center"
+msgstr "Centro de costo"
+
+#: templates/hooks/issuance.php:142
+msgid "Origin agency address"
+msgstr "Dirección de la agencia origen"
+
+#: templates/hooks/issuance.php:148
+msgid "Shipping price"
+msgstr "Precio del envío"
+
+#: templates/hooks/issuance.php:154
+msgid "Declared value"
+msgstr "Valor declarado"
+
+#: templates/hooks/issuance.php:161
+#: templates/hooks/issuance.php:197
+msgid "Status"
+msgstr "Estado"
+
+#: templates/hooks/issuance.php:167
+msgid "Commitment date"
+msgstr "Fecha de compromiso"
+
+#: templates/hooks/issuance.php:173
+#: templates/hooks/issuance.php:199
+msgid "Created at"
+msgstr "Creado"
+
+#: templates/hooks/issuance.php:179
+#: templates/hooks/issuance.php:200
+msgid "Updated at"
+msgstr "Actualizado"
+
+#: templates/hooks/issuance.php:193
+msgid "History"
+msgstr "Historial"
+
+#: templates/hooks/issuance.php:198
+msgid "Note"
+msgstr "Nota"
+
+#: templates/hooks/issuance.php:218
+msgid "Error"
+msgstr "Error"
+
+#: templates/hooks/issuance.php:223
+msgid "Issuance ID:"
+msgstr "ID de la emisión"
+
+#: templates/hooks/issuance.php:227
+msgid "Delivery type:"
+msgstr "Tipo de entrega"
+
+#: templates/hooks/issuance.php:231
+msgid "Payment type:"
+msgstr "Tipo de pago"
+
+#: templates/hooks/issuance.php:235
+msgid "Service type:"
+msgstr "Tipo de servicio"
+
+#: templates/hooks/issuance.php:239
+msgid "Origin agency:"
+msgstr "Agencia origen"
+
+#: templates/hooks/issuance.php:243
+msgid "Destination agency:"
+msgstr "Agencia destino"
+
+#: includes/Swastarkencl.php:91
+msgid "Order state to generate an issue"
+msgstr "Estado de la orden"
+
+#: includes/Swastarkencl.php:92
+msgid "Set the order state from which the issue will be generated"
+msgstr "Configure el Estado de la orden a partir del cual se generará la emisión"
+
+#: includes/Swastarkencl.php:20
+msgid "Starken Carrier"
+msgstr "Transportista Starken"
+
+#: includes/SwastarkenclStarter.php:141
+msgid "Street's name"
+msgstr "Nombre de la calle"
+
+#: includes/SwastarkenclStarter.php:163
+msgid "Department, Local, Office etc..."
+msgstr "Departamento, local, oficina, etc..."
+
+#: includes/SwastarkenclStarter.php:135
+msgid "Country"
+msgstr "País"
+
+#: templates/hooks/issuance.php:218
+msgid "No trace data available yet!"
+msgstr "Aún no hay datos de rastreo disponible."
+
+#: templates/hooks/issuance.php:219
+msgid "Update"
+msgstr "Actualizar"
+

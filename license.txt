@@ -1,0 +1,6 @@
+Swastarkencl is private software: you CANNOT redistribute it, sell it and/or modify it under or in any form without 
+written authorization of its owner / developer.
+ 
+Swastarkencl is distributed / sell in the hope that it will be useful to you.
+
+You should have received a copy of its License along with Swastarkencl. If not, see https://www.softwareagil.com.
