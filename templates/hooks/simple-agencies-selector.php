@@ -14,13 +14,15 @@
     <div class="col-sm-12">
         <h4><?= __('Starken Agencies', 'swastarkencl') ?></h4>
         <select id="swastarkencl_simple_list_of_agencies" style="width: 100%" class="form-control">
-            <?php foreach($agencies as $agency): ?>
-                <option
-                    value="<?= $agency->code_dls ?>"
-                    <?php if($agency->code_dls == $selected_agency): ?>selected="selected"<?php endif; ?>>
-                    <?= $agency->name ?>
-                </option>
-            <?php endforeach; ?>
+            <?php if(is_array($agencies)): ?>
+                <?php foreach($agencies as $agency): ?>
+                    <option
+                        value="<?= $agency->code_dls ?>"
+                        <?php if($agency->code_dls == $selected_agency): ?>selected="selected"<?php endif; ?>>
+                        <?= $agency->name ?>
+                    </option>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </select>
     </div>
 </div>

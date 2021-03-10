@@ -257,6 +257,11 @@ if (!class_exists('SwastarkenclStarter')) {
                     exit;
                 }
 
+                if(!isset($_POST['commune_id'])){
+                    echo json_encode([]);
+                    exit;
+                }
+
                 $curl = new Curl\Curl();
                 $curl->setHeader('Content-Type', 'application/json');
                 $curl->setHeader('Authorization', 'Bearer ' . $plugin_settings->get_user_token());
@@ -305,6 +310,11 @@ if (!class_exists('SwastarkenclStarter')) {
                 $plugin_settings = SwastarkenclSetting::get_instance();
 
                 if (empty($plugin_settings->get_user_token()) || empty($plugin_settings->get_api_url())) {
+                    echo json_encode([]);
+                    exit;
+                }
+
+                if (!isset($_POST['ctacte_code'])) {
                     echo json_encode([]);
                     exit;
                 }
@@ -366,8 +376,10 @@ if (!class_exists('SwastarkenclStarter')) {
 
         public static function save_changed_agency()
         {
-            if (!wp_verify_nonce($_POST['none'], 'ajax-nonce')) {
-                // TODO: validate
+            if(isset($_POST['none'])){
+                if (!wp_verify_nonce($_POST['none'], 'ajax-nonce')) {
+                    // TODO: validate
+                }
             }
 
             $customer_id = (int) WC()->customer->get_id();
@@ -391,9 +403,16 @@ if (!class_exists('SwastarkenclStarter')) {
             $swastarkenclcustomeragency = new SwastarkenclCustomerAgency();
             $swastarkenclcustomeragency->customer_id = $customer_id;
             // TODO: validate post fields, find wordpress function zanitation
-            $swastarkenclcustomeragency->customer_rut = sanitize_text_field($_POST['customer_rut']);
-            $swastarkenclcustomeragency->agency_dls = (int) $_POST['agency_id'];
-            $swastarkenclcustomeragency->state_id = (int) $_POST['state_id'];
+
+            $customer_rut = isset($_POST['customer_rut'])?sanitize_text_field($_POST['customer_rut']):'';
+            $swastarkenclcustomeragency->customer_rut = $customer_rut;
+
+            $agencyId = isset($_POST['agency_id'])?(int)$_POST['agency_id']:'';
+            $swastarkenclcustomeragency->agency_dls = $agencyId;
+
+            $state_id = isset($_POST['state_id'])?(int)$_POST['state_id']:'';
+            $swastarkenclcustomeragency->state_id = $state_id;
+            
 
             return $swastarkenclcustomeragency->add();
         }
@@ -416,8 +435,10 @@ if (!class_exists('SwastarkenclStarter')) {
 
         public static function get_commune_agencies_from_api()
         {
-            if (!wp_verify_nonce($_POST['none'], 'ajax-nonce')) {
+            if(isset($_POST['none'])){
+                if (!wp_verify_nonce($_POST['none'], 'ajax-nonce')) {
                 // TODO: validate
+                }
             }
 
             $commune_id = (int) WC()->customer->get_shipping_state();
@@ -943,6 +964,12 @@ if (!class_exists('SwastarkenclStarter')) {
                 $curl->setHeader('Content-Type', 'application/json');
                 $curl->setHeader('Authorization', 'Bearer ' . $plugin_settings->get_user_token());
                 $curl->get($plugin_settings->get_api_url() . '/agency/comuna/' . $commune_id);
+
+                $httpCode = $curl->getHttpStatusCode();
+
+                if ($httpCode == 404 || $httpCode == 204 || $curl->error) {
+                    return;
+                }
 
                 if (SwastarkenclStarter::validate_api_response($curl->response)) {
                     $agencies = $curl->response->agencies;

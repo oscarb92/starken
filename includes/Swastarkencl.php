@@ -373,10 +373,16 @@ if (!class_exists('Swastarkencl') && class_exists('WC_Shipping_Method')) {
             $curl->setHeader('Authorization', 'Bearer ' . $plugin_settings->get_user_token());
             $curl->post($plugin_settings->get_api_url() . '/quote/cotizador-multiple', json_encode($data));
 
+            $httpCode = $curl->getHttpStatusCode();
+
             if ($plugin_settings->get_enable_log()) {
                 SwastarkenclStarter::get_logger_instance()->info(
                     $plugin_settings->get_api_url() . ' RESPONSE :: /quote/cotizador-multiple :: ' . json_encode($curl->response)
                 );
+            }
+
+            if ($httpCode == 404 || $httpCode == 204 || $curl->error) {
+                return null;
             }
 
             if (SwastarkenclStarter::validate_api_response($curl->response)) {
